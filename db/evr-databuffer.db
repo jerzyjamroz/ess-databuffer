@@ -1,41 +1,79 @@
-record(waveform, "rawData") {
-  field(NELM, "4")
-  field(FTVL, "DOUBLE") 
-  field(FLNK, "param1")
+record(subArray, "$(SYS)-$(D):dbus-u32indx0-subA_") {
+  field(DTYP, "Soft Channel")
+  field(INP, "$(SYS)-$(D):dbus-recv-u32 CPP")
+  field(INDX, "0")
+  field(NELM, "1")
+  field(MALM, "2046")
+  field(FTVL, "UCHAR") #"ULONG") 
+  field(FLNK, "$(SYS)-$(D):BeamMode-RB")
 }
 
-record(subArray, "param1") {
+record(longin, "$(SYS)-$(D):BeamMode-RB") {
   field(DTYP, "Soft Channel")
-  field(INP, "rawData")
-  field(NELM, "1")
-  field(MALM, "1")
-  field(FTVL, "DOUBLE")
+  field(INP, "$(SYS)-$(D):dbus-u32indx0-subA_")
+  field(LOPR, "0")
+  field(HOPR, "8")
+}
+
+record(mbbi, "$(SYS)-$(D):BeamMode-I") {
+  field(DTYP, "Raw Soft Channel")
+  field(INP , "$(SYS)-$(D):BeamMode-RB CPP")
+  field(ZRST, "None")
+  field(ONST, "Probe Beam")
+  field(TWST, "Fast tuning")
+  field(THST, "Slow tuning")
+  field(FRST, "Fat probe")
+  field(FVST, "Slow Studies")
+  field(SXST, "Long pulse verification")
+  field(SVST, "Shielding verification")
+  field(EIST, "Production")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(FVVL, "5")
+  field(SXVL, "6")
+  field(SVVL, "7")
+  field(EIVL, "8")
+  field(NISV, "INVALID")
+  field(TESV, "INVALID")
+  field(ELSV, "INVALID")
+  field(TVSV, "INVALID")
+  field(TTSV, "INVALID")
+  field(FTSV, "INVALID")
+  field(FFSV, "INVALID")
+  field(UNSV, "INVALID")
+}
+
+record(subArray, "param2subA_") {
+  field(DTYP, "Soft Channel")
+  field(INP, "$(SYS)-$(D):dbus-recv-u32 CPP")
+  field(INDX, "1")
+  field(NELM, "2046")
+  field(MALM, "2046")
+  field(FTVL, "ULONG")
   field(FLNK, "param2")
 }
 
-record(subArray, "param2") {
+record(longin, "param2") {
   field(DTYP, "Soft Channel")
-  field(INP, "rawData")
-  field(NELM, "1")
-  field(MALM, "2")
-  field(INDX, "1") # INDX <= MALM-1
-  field(FTVL, "DOUBLE") # should it be SHORT or even CHAR???
-  field(FLNK, "rawparam3")
+  field(INP, "param2subA_")
 }
 
-record(subArray, "rawparam3") {
+record(subArray, "param3subA_") {
   field(DTYP, "Soft Channel")
-  field(INP, "rawData")
-  field(NELM, "1")
-  field(MALM, "3")
-  field(INDX, "2") # INDX <= MALM-1
-  field(FTVL, "DOUBLE")
+  field(INP, "$(SYS)-$(D):dbus-recv-u32 CPP")
+  field(INDX, "2")
+  field(NELM, "2046")
+  field(MALM, "2046")
+  field(FTVL, "ULONG")
   field(FLNK, "param3")
 }
 
-record(ai, "param3") { # should it be longin???
+record(longin, "param3") {
   field(DTYP, "Soft Channel")
-  field(INP, "rawparam3")
+  field(INP, "param3subA_")
 }
 
 ###############################################################################
