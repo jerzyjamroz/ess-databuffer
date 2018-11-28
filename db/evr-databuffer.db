@@ -1,0 +1,58 @@
+record(waveform, "rawData") {
+  field(NELM, "4")
+  field(FTVL, "DOUBLE") 
+  field(FLNK, "param1")
+}
+
+record(subArray, "param1") {
+  field(DTYP, "Soft Channel")
+  field(INP, "rawData")
+  field(NELM, "1")
+  field(MALM, "1")
+  field(FTVL, "DOUBLE")
+  field(FLNK, "param2")
+}
+
+record(subArray, "param2") {
+  field(DTYP, "Soft Channel")
+  field(INP, "rawData")
+  field(NELM, "1")
+  field(MALM, "2")
+  field(INDX, "1") # INDX <= MALM-1
+  field(FTVL, "DOUBLE") # should it be SHORT or even CHAR???
+  field(FLNK, "rawparam3")
+}
+
+record(subArray, "rawparam3") {
+  field(DTYP, "Soft Channel")
+  field(INP, "rawData")
+  field(NELM, "1")
+  field(MALM, "3")
+  field(INDX, "2") # INDX <= MALM-1
+  field(FTVL, "DOUBLE")
+  field(FLNK, "param3")
+}
+
+record(ai, "param3") { # should it be longin???
+  field(DTYP, "Soft Channel")
+  field(INP, "rawparam3")
+}
+
+###############################################################################
+#record(waveform, "$(SYS,undefined)-$(D,undefined):dbus-recv-u32") {
+#  field(DESC, "Recv Buffer")
+#  field(DTYP, "MRM EVR Buf Rx")
+#  field(INP , "@OBJ=$(EVR,undefined):BUFRX, Proto=0xff00, P=Data Rx")
+#  field(FTVL, "ULONG")
+#  field(NELM, "2046")
+#  info(autosaveFields_pass0, "INP")
+#}
+#record(waveform, "$(SYS,undefined)-$(D,undefined):SoftSeq0-EvtCode-SP") {
+#    field( DTYP, "Obj Prop waveform out")
+#    field( DESC, "Sequence event code array")
+#    field( INP,  "@OBJ=$(EVR,undefined):SEQ0, CLASS=SeqManager, PARENT=$(EVR,undefined):SEQMGR, PROP=CODES")
+#    field( NELM, "2047")
+#    field( FTVL, "UCHAR")
+#    info( autosaveFields_pass1, "VAL")
+#}
+
