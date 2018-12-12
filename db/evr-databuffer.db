@@ -1,4 +1,4 @@
-# This is protocol 0.0 date 20181211
+# This is protocol 0.0 date 20181207
 
 # Byte offset : 0 , Byte length : 2 - Protocol
 # Byte offset : 4 , Byte length : 4 - Beam Pulse ID
@@ -17,16 +17,16 @@ record(subArray, "$(SYS)-$(D):dbus-s8indx0-subA_") {
   field(DTYP, "Soft Channel")
   field(INP, "$(SYS)-$(D):dbus-recv-s8 CPP")
   field(INDX, "0")
-  field(NELM, "2046")
-  field(MALM, "2046")
+  field(NELM, "1") # "2046")
+  field(MALM, "2") # "2046")
   field(FTVL, "CHAR") # eventually should be UCHAR 
 }
 record(subArray, "$(SYS)-$(D):dbus-s8indx1-subA_") {
   field(DTYP, "Soft Channel")
   field(INP, "$(SYS)-$(D):dbus-recv-s8 CPP")
   field(INDX, "1")
-  field(NELM, "2046")
-  field(MALM, "2046")
+  field(NELM, "1") # "2046")
+  field(MALM, "2") # "2046")
   field(FTVL, "CHAR") # eventually should be UCHAR
 }
 record(calc, "$(SYS)-$(D):ProtoNum-RB_") { # this replaces the longin, since UCHAR has the same range as CHAR...
@@ -67,8 +67,8 @@ record(subArray, "$(SYS)-$(D):dbus-u32indx1-subA_") {
   field(DTYP, "Soft Channel")
   field(INP, "$(SYS)-$(D):dbus-recv-u32 CPP")
   field(INDX, "1")
-  field(NELM, "2046")
-  field(MALM, "2046")
+  field(NELM, "1") # "2046")
+  field(MALM, "2") # "2046")
   field(FTVL, "ULONG")
 }
 record(longin, "$(SYS)-$(D):BeamID-RB") {
@@ -81,8 +81,8 @@ record(subArray, "$(SYS)-$(D):dbus-s8indx8-subA_") {
   field(DTYP, "Soft Channel")
   field(INP, "$(SYS)-$(D):dbus-recv-s8 CPP")
   field(INDX, "8")
-  field(NELM, "2046")
-  field(MALM, "2046")
+  field(NELM, "1") # "2046")
+  field(MALM, "9") # "2046")
   field(FTVL, "UCHAR")
 }
 record(bi, "$(SYS)-$(D):BeamPres-RB") {
@@ -97,8 +97,8 @@ record(subArray, "$(SYS)-$(D):dbus-s8indx9-subA_") {
   field(DTYP, "Soft Channel")
   field(INP, "$(SYS)-$(D):dbus-recv-s8 CPP")
   field(INDX, "9")
-  field(NELM, "2046")
-  field(MALM, "2046")
+  field(NELM, "1") # "2046")
+  field(MALM, "10") # "2046")
   field(FTVL, "UCHAR")
 }
 record(longin, "$(SYS)-$(D):BeamDest-RB") {
@@ -143,8 +143,8 @@ record(subArray, "$(SYS)-$(D):dbus-s8indx10-subA_") {
   field(DTYP, "Soft Channel")
   field(INP, "$(SYS)-$(D):dbus-recv-s8 CPP")
   field(INDX, "10")
-  field(NELM, "2046")
-  field(MALM, "2046")
+  field(NELM, "1")  # "2046")
+  field(MALM, "11") # "2046")
   field(FTVL, "UCHAR")
 }
 record(longin, "$(SYS)-$(D):BeamMode-RB") {
@@ -189,8 +189,8 @@ record(subArray, "$(SYS)-$(D):dbus-u32indx3-subA_") {
   field(DTYP, "Soft Channel")
   field(INP, "$(SYS)-$(D):dbus-recv-u32 CPP")
   field(INDX, "3")
-  field(NELM, "2046")
-  field(MALM, "2046")
+  field(NELM, "1") # "2046")
+  field(MALM, "4") # "2046")
   field(FTVL, "ULONG")
 }
 record(ai, "$(SYS)-$(D):PulseLength-RB") {
@@ -208,8 +208,8 @@ record(subArray, "$(SYS)-$(D):dbus-u32indx4-subA_") {
   field(DTYP, "Soft Channel")
   field(INP, "$(SYS)-$(D):dbus-recv-u32 CPP")
   field(INDX, "4")
-  field(NELM, "2046")
-  field(MALM, "2046")
+  field(NELM, "1") # "2046")
+  field(MALM, "5") # "2046")
   field(FTVL, "ULONG")
 }
 record(ai, "$(SYS)-$(D):ProtonEn-RB") {
@@ -227,8 +227,8 @@ record(subArray, "$(SYS)-$(D):dbus-u32indx5-subA_") {
   field(DTYP, "Soft Channel")
   field(INP, "$(SYS)-$(D):dbus-recv-u32 CPP")
   field(INDX, "5")
-  field(NELM, "2046")
-  field(MALM, "2046")
+  field(NELM, "1") # "2046")
+  field(MALM, "6") # "2046")
   field(FTVL, "ULONG")
 }
 record(ai, "$(SYS)-$(D):BeamCur-RB") {
@@ -244,24 +244,4 @@ record(ai, "$(SYS)-$(D):BeamCur-RB") {
 # Byte offset : 24 , Byte length : 1 - Raster Pattern
 # Byte offset : 25 , Byte length : 1 - Target Segment
 # Byte offset : 26 , Byte length : 1 - BCM calibration - needed?
-
-
-
-###############################################################################
-#record(waveform, "$(SYS,undefined)-$(D,undefined):dbus-recv-u32") {
-#  field(DESC, "Recv Buffer")
-#  field(DTYP, "MRM EVR Buf Rx")
-#  field(INP , "@OBJ=$(EVR,undefined):BUFRX, Proto=0xff00, P=Data Rx")
-#  field(FTVL, "ULONG")
-#  field(NELM, "2046")
-#  info(autosaveFields_pass0, "INP")
-#}
-#record(waveform, "$(SYS,undefined)-$(D,undefined):SoftSeq0-EvtCode-SP") {
-#    field( DTYP, "Obj Prop waveform out")
-#    field( DESC, "Sequence event code array")
-#    field( INP,  "@OBJ=$(EVR,undefined):SEQ0, CLASS=SeqManager, PARENT=$(EVR,undefined):SEQMGR, PROP=CODES")
-#    field( NELM, "2047")
-#    field( FTVL, "UCHAR")
-#    info( autosaveFields_pass1, "VAL")
-#}
 
