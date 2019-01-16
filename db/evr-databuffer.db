@@ -37,8 +37,8 @@ record(calc, "$(SYS)-$(D):ProtoNum-RB_") { # this replaces the longin, since UCH
 #record(longin, "$(SYS)-$(D):ProtoNum-RB_") {
 #  field(DTYP, "Soft Channel")
 #  field(INP, "$(SYS)-$(D):dbus-s8indx0-subA_ CPP")
-#  field(LOPR, "0")
-#  field(HOPR, "255")
+#  field(DRVL, "0") # field(LOPR, "0")
+#  field(DRVH, "255") # field(HOPR, "255")
 #}
 record(calc, "$(SYS)-$(D):ProtoVer-RB_") { # this replaces the longin, since UCHAR has the same range as CHAR...
   field(CALC, "A<0?A+256:A")
@@ -48,8 +48,8 @@ record(calc, "$(SYS)-$(D):ProtoVer-RB_") { # this replaces the longin, since UCH
 #record(longin, "$(SYS)-$(D):ProtoVer-RB_") {
 #  field(DTYP, "Soft Channel")
 #  field(INP, "$(SYS)-$(D):dbus-s8indx1-subA_ CPP")
-#  field(LOPR, "0")
-#  field(HOPR, "255")
+#  field(DRVL, "0") # field(LOPR, "0")
+#  field(DRVH, "255") # field(HOPR, "255")
 #}
 record(calc, "$(SYS)-$(D):Protocol-RB") {
   field(CALC, "A+0.001*B")
