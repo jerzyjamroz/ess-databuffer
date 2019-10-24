@@ -1,9 +1,9 @@
-# This is protocol 0.0 date 20181212
+# ESS EVR data buffer PVs
 
-# Byte offset : 0 , Byte length : 2 - Protocol
-# Byte offset : 4 , Byte length : 4 - Beam Pulse ID
-# Byte offset : 8 , Byte length : 1 - Beam Present
-# Byte offset : 9 , Byte length : 1 - Beam Destination (according to ESS-0038258)
+# Byte offset : 0  , Byte length : 2 - Protocol
+# Byte offset : 4  , Byte length : 4 - Beam Pulse ID
+# Byte offset : 8  , Byte length : 1 - Beam Present
+# Byte offset : 9  , Byte length : 1 - Beam Destination (according to ESS-0038258)
 # Byte offset : 10 , Byte length : 1 - Beam Mode (according to ESS-0038258)
 # Byte offset : 12 , Byte length : 4 - Intended Pulse Length
 # Byte offset : 16 , Byte length : 4 - Intended Proton Energy

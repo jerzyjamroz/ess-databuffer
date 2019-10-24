@@ -1,0 +1,74 @@
+# Fetch Data Buffer Support
+
+# record(subArray, "$(SYS)-$(D):dbus-u32indx0-subA_") {
+#   field(DTYP, "Soft Channel")
+#   field(INP, "$(SYS)-$(D):dbus-recv-u32 CPP")
+#   field(INDX, "0")
+#   field(NELM, "1") # "2046")
+#   field(MALM, "2") # "2046")
+#   field(FTVL, "ULONG")
+# }
+# 
+# record(subArray, "$(SYS)-$(D):dbus-u32indx4-subA_") {
+#   field(DTYP, "Soft Channel")
+#   field(INP, "$(SYS)-$(D):dbus-recv-u32 CPP")
+#   field(INDX, "4")
+#   field(NELM, "1") # "2046")
+#   field(MALM, "5") # "2046")
+#   field(FTVL, "ULONG")
+# }
+# 
+# record(subArray, "$(SYS)-$(D):dbus-u32indx8-subA_") {
+#   field(DTYP, "Soft Channel")
+#   field(INP, "$(SYS)-$(D):dbus-recv-u32 CPP")
+#   field(INDX, "8")
+#   field(NELM, "1") # "2046")
+#   field(MALM, "9") # "2046")
+#   field(FTVL, "ULONG")
+# }
+# 
+# record(subArray, "$(SYS)-$(D):dbus-u32indx12-subA_") {
+#   field(DTYP, "Soft Channel")
+#   field(INP, "$(SYS)-$(D):dbus-recv-u32 CPP")
+#   field(INDX, "12")
+#   field(NELM, "1") # "2046")
+#   field(MALM, "13") # "2046")
+#   field(FTVL, "ULONG")
+# }
+# 
+# record(subArray, "$(SYS)-$(D):dbus-u32indx16-subA_") {
+#   field(DTYP, "Soft Channel")
+#   field(INP, "$(SYS)-$(D):dbus-recv-u32 CPP")
+#   field(INDX, "16")
+#   field(NELM, "1") # "2046")
+#   field(MALM, "17") # "2046")
+#   field(FTVL, "ULONG")
+# }
+# 
+# record(subArray, "$(SYS)-$(D):dbus-u32indx20-subA_") {
+#   field(DTYP, "Soft Channel")
+#   field(INP, "$(SYS)-$(D):dbus-recv-u32 CPP")
+#   field(INDX, "20")
+#   field(NELM, "1") # "2046")
+#   field(MALM, "21") # "2046")
+#   field(FTVL, "ULONG")
+# }
+# 
+# record(subArray, "$(SYS)-$(D):dbus-u32indx24-subA_") {
+#   field(DTYP, "Soft Channel")
+#   field(INP, "$(SYS)-$(D):dbus-recv-u32 CPP")
+#   field(INDX, "24")
+#   field(NELM, "1") # "2046")
+#   field(MALM, "25") # "2046")
+#   field(FTVL, "ULONG")
+# }
+# 
+# record(subArray, "$(SYS)-$(D):dbus-u32indx28-subA_") {
+#   field(DTYP, "Soft Channel")
+#   field(INP, "$(SYS)-$(D):dbus-recv-u32 CPP")
+#   field(INDX, "28")
+#   field(NELM, "1") # "2046")
+#   field(MALM, "29") # "2046")
+#   field(FTVL, "ULONG")
+# }
+# 
